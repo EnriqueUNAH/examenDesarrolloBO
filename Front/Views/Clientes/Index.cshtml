@@ -1,0 +1,129 @@
+﻿@{
+    ViewData["Title"] = "Clientes";
+}
+
+<div class="container">
+    <h2>Clientes</h2>
+    <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#createClienteModal">Nuevo Cliente</button>
+    <table id="clientesTable" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>ID Cliente</th>
+                <th>Nombre</th>
+                <th>Número Identidad</th>
+                <th>Código Cliente</th>
+                <th>Fecha Registro</th>
+                <th>Fecha Modificado</th>
+                <th>Usuario</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal para crear cliente -->
+<div class="modal fade" id="createClienteModal" tabindex="-1" aria-labelledby="createClienteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createClienteModalLabel">Nuevo Cliente</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="createClienteForm">
+                    <div class="form-group">
+                        <label for="createIdTipoCliente">ID Tipo Cliente</label>
+                        <select class="form-control" id="createIdTipoCliente" name="idTipoCliente" required></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="createCodigoCliente">Código Cliente</label>
+                        <input type="text" class="form-control" id="createCodigoCliente" name="codigoCliente" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="createNumeroIdentidad">Número Identidad</label>
+                        <input type="text" class="form-control" id="createNumeroIdentidad" name="numeroIdentidad" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="createNombreCliente">Nombre Cliente</label>
+                        <input type="text" class="form-control" id="createNombreCliente" name="nombreCliente" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="createIdUsuario">ID Usuario</label>
+                        <input type="number" class="form-control" id="createIdUsuario" name="idUsuario" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para editar cliente -->
+<div class="modal fade" id="editClienteModal" tabindex="-1" aria-labelledby="editClienteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editClienteModalLabel">Editar Cliente</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="editClienteForm">
+                    <input type="hidden" id="editClienteId" name="idCliente">
+                    <input type="hidden" id="editFechaRegistro" name="fechaRegistro">
+                    <input type="hidden" id="editFechaModificado" name="fechaModificado">
+                    <div class="form-group">
+                        <label for="editIdTipoCliente">ID Tipo Cliente</label>
+                        <select class="form-control" id="editIdTipoCliente" name="idTipoCliente" required></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="editCodigoCliente">Código Cliente</label>
+                        <input type="text" class="form-control" id="editCodigoCliente" name="codigoCliente" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editNumeroIdentidad">Número Identidad</label>
+                        <input type="text" class="form-control" id="editNumeroIdentidad" name="numeroIdentidad" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editNombreCliente">Nombre Cliente</label>
+                        <input type="text" class="form-control" id="editNombreCliente" name="nombreCliente" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editIdUsuario">ID Usuario</label>
+                        <input type="number" class="form-control" id="editIdUsuario" name="idUsuario" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para confirmar eliminación de cliente -->
+<div class="modal fade" id="deleteClienteModal" tabindex="-1" aria-labelledby="deleteClienteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteClienteModalLabel">Eliminar Cliente</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>¿Estás seguro de que deseas eliminar este cliente?</p>
+                <form id="deleteClienteForm">
+                    <input type="hidden" id="deleteClienteId" name="idCliente">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/clientes.js"></script>

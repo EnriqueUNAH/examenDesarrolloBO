@@ -28,3 +28,4 @@ C:\Users\hnola\OneDrive\Documentos\PRACTICA BANCO DE OCCIDENTE\ExamenDesrrollo\F
 C:\Users\hnola\OneDrive\Documentos\PRACTICA BANCO DE OCCIDENTE\ExamenDesrrollo\Front\obj\Debug\net8.0\Front.pdb
 C:\Users\hnola\OneDrive\Documentos\PRACTICA BANCO DE OCCIDENTE\ExamenDesrrollo\Front\obj\Debug\net8.0\Front.genruntimeconfig.cache
 C:\Users\hnola\OneDrive\Documentos\PRACTICA BANCO DE OCCIDENTE\ExamenDesrrollo\Front\obj\Debug\net8.0\ref\Front.dll
+C:\Users\hnola\OneDrive\Documentos\PRACTICA BANCO DE OCCIDENTE\ExamenDesrrollo\Front\obj\Debug\net8.0\Front.sourcelink.json

@@ -1,0 +1,121 @@
+﻿@{
+    ViewData["Title"] = "MotivoTransaccion";
+}
+
+<div class="container">
+    <h2>Motivo Transacción</h2>
+    <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#createMotivoTransaccionModal">Nuevo Motivo Transacción</button>
+    <table id="motivoTransaccionTable" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>ID Motivo Transacción</th>
+                <th>ID Tipo Transacción</th>
+                <th>Código Motivo Transacción</th>
+                <th>Nombre Motivo Transacción</th>
+                <th>Fecha Registro</th>
+                <th>Fecha Modificado</th>
+                <th>ID Usuario</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal para crear motivo transacción -->
+<div class="modal fade" id="createMotivoTransaccionModal" tabindex="-1" aria-labelledby="createMotivoTransaccionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createMotivoTransaccionModalLabel">Nuevo Motivo Transacción</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="createMotivoTransaccionForm">
+                    <div class="form-group">
+                        <label for="createIdTipoTransaccion">ID Tipo Transacción</label>
+                        <input type="number" class="form-control" id="createIdTipoTransaccion" name="idTipoTransaccion" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="createCodigoMotivoTransaccion">Código Motivo Transacción</label>
+                        <input type="text" class="form-control" id="createCodigoMotivoTransaccion" name="codigoMotivoTransaccion" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="createNombreMotivoTransaccion">Nombre Motivo Transacción</label>
+                        <input type="text" class="form-control" id="createNombreMotivoTransaccion" name="nombreMotivoTransaccion" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="createIdUsuario">ID Usuario</label>
+                        <input type="number" class="form-control" id="createIdUsuario" name="idUsuario" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para editar motivo transacción -->
+<div class="modal fade" id="editMotivoTransaccionModal" tabindex="-1" aria-labelledby="editMotivoTransaccionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editMotivoTransaccionModalLabel">Editar Motivo Transacción</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="editMotivoTransaccionForm">
+                    <input type="hidden" id="editMotivoTransaccionId" name="idMotivoTransaccion">
+                    <input type="hidden" id="editFechaRegistro" name="fechaRegistro">
+                    <input type="hidden" id="editFechaModificado" name="fechaModificado">
+                    <div class="form-group">
+                        <label for="editIdTipoTransaccion">ID Tipo Transacción</label>
+                        <input type="number" class="form-control" id="editIdTipoTransaccion" name="idTipoTransaccion" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editCodigoMotivoTransaccion">Código Motivo Transacción</label>
+                        <input type="text" class="form-control" id="editCodigoMotivoTransaccion" name="codigoMotivoTransaccion" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editNombreMotivoTransaccion">Nombre Motivo Transacción</label>
+                        <input type="text" class="form-control" id="editNombreMotivoTransaccion" name="nombreMotivoTransaccion" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editIdUsuario">ID Usuario</label>
+                        <input type="number" class="form-control" id="editIdUsuario" name="idUsuario" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para confirmar eliminación de motivo transacción -->
+<div class="modal fade" id="deleteMotivoTransaccionModal" tabindex="-1" aria-labelledby="deleteMotivoTransaccionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteMotivoTransaccionModalLabel">Eliminar Motivo Transacción</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>¿Estás seguro de que deseas eliminar este motivo de transacción?</p>
+                <form id="deleteMotivoTransaccionForm">
+                    <input type="hidden" id="deleteMotivoTransaccionId" name="idMotivoTransaccion">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/motivoTransaccion.js"></script>

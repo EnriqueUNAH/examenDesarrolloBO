@@ -1,14 +1,13 @@
 ﻿$(document).ready(function () {
-    const apiBaseUrl = "https://localhost:7106/api/Agencias";
+    const apiBaseUrl = 'https://localhost:7106/api/Agencias';
 
-    // Inicializar DataTable
     $('#agenciasTable').DataTable({
         "ajax": {
             "url": apiBaseUrl,
             "dataSrc": ""
         },
         "columns": [
-            { "data": "idAgencia", "visible": false },
+            { "data": "idAgencia" },
             { "data": "idCanalServicio" },
             { "data": "codigoAgencia" },
             { "data": "nombreAgencia" },
@@ -21,26 +20,12 @@
                 "data": null,
                 "render": function (data, type, row) {
                     return `
-                        <button class="edit-btn" onclick="showEditAgenciaModal(${row.idAgencia})"><i class="fas fa-edit"></i></button>
-                        <button class="delete-btn" onclick="showDeleteAgenciaModal(${row.idAgencia})"><i class="fas fa-trash-alt"></i></button>
+                        <button class="edit-btn" onclick="showEditUserModal(${row.idAgencia})"><i class="fas fa-edit"></i></button>
+                        <button class="delete-btn" onclick="showDeleteUserModal(${row.idAgencia})"><i class="fas fa-trash-alt"></i></button>
                     `;
                 }
             }
         ],
-        "columnDefs": [
-            { "width": "15%", "targets": 1 },
-            { "width": "15%", "targets": 2 },
-            { "width": "10%", "targets": 3 },
-            { "width": "10%", "targets": 4 },
-            { "width": "10%", "targets": 5 },
-            { "width": "10%", "targets": 6 },
-            { "width": "10%", "targets": 7 },
-            { "width": "10%", "targets": 8 },
-            { "width": "5%", "targets": 9 }
-        ],
-        "responsive": true,
-        "autoWidth": false,
-        "scrollX": true,
         "language": {
             "lengthMenu": "Mostrar _MENU_ entradas",
             "zeroRecords": "No se encontraron resultados",
@@ -57,79 +42,66 @@
         }
     });
 
-    // Función para mostrar el modal de editar agencia
-    window.showEditAgenciaModal = function (id) {
-        // Lógica para obtener los datos de la agencia y llenar el formulario
+    window.showEditUserModal = function (id) {
         $.ajax({
             url: `${apiBaseUrl}/${id}`,
             method: 'GET',
             success: function (data) {
-                $('#editIdAgencia').val(data.idAgencia);
+                $('#editAgenciaId').val(data.idAgencia);
                 $('#editIdCanalServicio').val(data.idCanalServicio);
                 $('#editCodigoAgencia').val(data.codigoAgencia);
                 $('#editNombreAgencia').val(data.nombreAgencia);
                 $('#editDireccionAgencia').val(data.direccionAgencia);
                 $('#editTelefonoAgencia').val(data.telefonoAgencia);
+                $('#editFechaRegistro').val(data.fechaRegistro);
+                $('#editFechaModificado').val(new Date().toISOString()); // Fecha actual para fechaModificado
                 $('#editIdUsuario').val(data.idUsuario);
                 $('#editAgenciaModal').modal('show');
             }
         });
     };
 
-    // Función para mostrar el modal de eliminar agencia
-    window.showDeleteAgenciaModal = function (id) {
+    window.showDeleteUserModal = function (id) {
         $('#deleteIdAgencia').val(id);
         $('#deleteAgenciaModal').modal('show');
     };
 
-    // Enviar datos de creación
-    $('#createAgenciaForm').submit(function (e) {
-        e.preventDefault();
-        const formData = $(this).serializeArray().reduce((obj, item) => {
-            obj[item.name] = item.value;
-            return obj;
-        }, {});
-
-        $.ajax({
-            url: apiBaseUrl,
-            method: 'POST',
-            contentType: 'application/json',
-            data: JSON.stringify(formData),
-            success: function () {
-                $('#agenciasTable').DataTable().ajax.reload();
-                $('#createAgenciaModal').modal('hide');
-            },
-            error: function () {
-                alert('Error al crear la agencia.');
-            }
-        });
-    });
-
-    // Enviar datos de edición
     $('#editAgenciaForm').submit(function (e) {
         e.preventDefault();
-        const id = $('#editIdAgencia').val();
-        const formData = $(this).serializeArray().reduce((obj, item) => {
-            obj[item.name] = item.value;
-            return obj;
-        }, {});
+        const id = $('#editAgenciaId').val();
+        const data = {
+            idAgencia: id,
+            idCanalServicio: $('#editIdCanalServicio').val(),
+            codigoAgencia: $('#editCodigoAgencia').val(),
+            nombreAgencia: $('#editNombreAgencia').val(),
+            direccionAgencia: $('#editDireccionAgencia').val(),
+            telefonoAgencia: $('#editTelefonoAgencia').val(),
+            fechaRegistro: $('#editFechaRegistro').val(),
+            fechaModificado: $('#editFechaModificado').val(),
+            idUsuario: $('#editIdUsuario').val()
+        };
 
-        $.ajax({
-            url: `${apiBaseUrl}/${id}`,
+        fetch(`${apiBaseUrl}/${id}`, {
             method: 'PUT',
-            contentType: 'application/json',
-            data: JSON.stringify(formData),
-            success: function () {
-                $('#agenciasTable').DataTable().ajax.reload();
-                $('#editAgenciaModal').modal('hide');
+            headers: {
+                'Content-Type': 'application/json'
             },
-            error: function () {
-                alert('Error al actualizar la agencia.');
-            }
-        });
+            body: JSON.stringify(data)
+        })
+            .then(response => {
+                if (response.ok) {
+                    alert('Agencia actualizada exitosamente');
+                    window.location.reload();
+                } else {
+                    throw new Error('Error al actualizar la Agencia');
+                }
+            })
+            .catch(error => {
+                console.error('Error al actualizar la Agencia:', error);
+                alert('Error al actualizar la Agencia');
+            });
     });
 
-    // Confirmar eliminación de agencia
     $('#deleteAgenciaForm').submit(function (e) {
         e.preventDefault();
         const id = $('#deleteIdAgencia').val();
@@ -137,13 +109,44 @@
         $.ajax({
             url: `${apiBaseUrl}/${id}`,
             method: 'DELETE',
-            success: function (response) {
+            success: function () {
                 $('#deleteAgenciaModal').modal('hide');
                 $('#agenciasTable').DataTable().ajax.reload();
-            },
-            error: function () {
-                alert('Error al eliminar la agencia.');
             }
         });
+    });
+
+    $('#createAgenciaForm').submit(function (e) {
+        e.preventDefault();
+        const data = {
+            idCanalServicio: $('#createIdCanalServicio').val(),
+            codigoAgencia: $('#createCodigoAgencia').val(),
+            nombreAgencia: $('#createNombreAgencia').val(),
+            direccionAgencia: $('#createDireccionAgencia').val(),
+            telefonoAgencia: $('#createTelefonoAgencia').val(),
+            idUsuario: $('#createIdUsuario').val(),
+            fechaRegistro: new Date().toISOString(), // Fecha actual para fechaRegistro
+            fechaModificado: new Date().toISOString() // Fecha actual para fechaModificado
+        };
+
+        fetch(apiBaseUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => {
+                if (response.ok) {
+                    alert('Agencia creada exitosamente');
+                    window.location.reload();
+                } else {
+                    throw new Error('Error al crear la Agencia');
+                }
+            })
+            .catch(error => {
+                console.error('Error al crear la Agencia:', error);
+                alert('Error al crear la Agencia');
+            });
     });
 });

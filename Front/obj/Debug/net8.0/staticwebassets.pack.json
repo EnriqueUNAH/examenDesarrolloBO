@@ -37,12 +37,28 @@
       "PackagePath": "staticwebassets\\js\\agencias.js"
     },
     {
+      "Id": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\wwwroot\\js\\canalservicio.js",
+      "PackagePath": "staticwebassets\\js\\canalservicio.js"
+    },
+    {
+      "Id": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\wwwroot\\js\\clientes.js",
+      "PackagePath": "staticwebassets\\js\\clientes.js"
+    },
+    {
+      "Id": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\wwwroot\\js\\motivoTransaccion.js",
+      "PackagePath": "staticwebassets\\js\\motivoTransaccion.js"
+    },
+    {
       "Id": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\wwwroot\\js\\scripts.js",
       "PackagePath": "staticwebassets\\js\\scripts.js"
     },
     {
       "Id": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\wwwroot\\js\\tipoCliente.js",
+      "PackagePath": "staticwebassets\\js\\tipoCliente.js"
     },
     {
       "Id": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\wwwroot\\lib\\bootstrap\\LICENSE",
@@ -237,6 +253,10 @@
       "PackagePath": "staticwebassets\\lib\\datatables2\\js\\moment.min.js"
     },
     {
+      "Id": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\wwwroot\\lib\\fontawesome\\all.js",
+      "PackagePath": "staticwebassets\\lib\\fontawesome\\all.js"
+    },
+    {
       "Id": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
@@ -283,6 +303,10 @@
     {
       "Id": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\wwwroot\\lib\\loadingoverlay\\loadingoverlay.min.js",
+      "PackagePath": "staticwebassets\\lib\\loadingoverlay\\loadingoverlay.min.js"
     },
     {
       "Id": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\wwwroot\\lib\\moment\\moment.min.js",

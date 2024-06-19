@@ -1,0 +1,116 @@
+﻿@{
+    ViewData["Title"] = "Canal Servicio";
+}
+
+<div class="container">
+    <h2>Canal Servicio</h2>
+    <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#createCanalServicioModal">Nuevo Canal Servicio</button>
+    <table id="canalServicioTable" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>ID Canal Servicio</th>
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Fecha Registro</th>
+                <th>Fecha Modificado</th>
+                <th>ID Usuario</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal para crear canal servicio -->
+<div class="modal fade" id="createCanalServicioModal" tabindex="-1" aria-labelledby="createCanalServicioModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createCanalServicioModalLabel">Nuevo Canal Servicio</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="createCanalServicioForm">
+                    <div class="form-group">
+                        <label for="createCodigoCanalServicio">Código</label>
+                        <input type="text" class="form-control" id="createCodigoCanalServicio" name="codigoCanalServicio" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="createNombreCanalServicio">Nombre</label>
+                        <input type="text" class="form-control" id="createNombreCanalServicio" name="nombreCanalServicio" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="createIdUsuario">ID Usuario</label>
+                        <input type="number" class="form-control" id="createIdUsuario" name="idUsuario" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para editar canal servicio -->
+<div class="modal fade" id="editCanalServicioModal" tabindex="-1" aria-labelledby="editCanalServicioModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editCanalServicioModalLabel">Editar Canal Servicio</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="editCanalServicioForm">
+                    <input type="hidden" id="editCanalServicioId" name="idCanalServicio">
+                    <input type="hidden" id="editFechaRegistro" name="fechaRegistro">
+                    <input type="hidden" id="editFechaModificado" name="fechaModificado">
+                    <div class="form-group">
+                        <label for="editCodigoCanalServicio">Código</label>
+                        <input type="text" class="form-control" id="editCodigoCanalServicio" name="codigoCanalServicio" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editNombreCanalServicio">Nombre</label>
+                        <input type="text" class="form-control" id="editNombreCanalServicio" name="nombreCanalServicio" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editIdUsuario">ID Usuario</label>
+                        <input type="number" class="form-control" id="editIdUsuario" name="idUsuario" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para confirmar eliminación de canal servicio -->
+<div class="modal fade" id="deleteCanalServicioModal" tabindex="-1" aria-labelledby="deleteCanalServicioModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteCanalServicioModalLabel">Eliminar Canal Servicio</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>¿Estás seguro de que deseas eliminar este canal servicio?</p>
+                <form id="deleteCanalServicioForm">
+                    <input type="hidden" id="deleteCanalServicioId" name="idCanalServicio">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Incluye jQuery antes de tu script personalizado -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/canalservicio.js"></script>
