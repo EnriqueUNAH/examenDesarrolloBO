@@ -1,0 +1,128 @@
+﻿@{
+    ViewData["Title"] = "Transacciones";
+}
+
+<div class="container">
+    <h2>Transacciones</h2>
+    <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#createTransaccionModal">Nueva Transacción</button>
+    <table id="transaccionesTable" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>ID Transacción</th>
+                <th>Motivo Transacción</th>
+                <th>Agencia</th>
+                <th>Cliente</th>
+                <th>Fecha Transacción</th>
+                <th>Monto Transacción</th>
+                <th>ID Usuario</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal para crear transacción -->
+<div class="modal fade" id="createTransaccionModal" tabindex="-1" aria-labelledby="createTransaccionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createTransaccionModalLabel">Nueva Transacción</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="createTransaccionForm">
+                    <div class="form-group">
+                        <label for="createIdMotivoTransaccion">Motivo Transacción</label>
+                        <select class="form-control" id="createIdMotivoTransaccion" name="idMotivoTransaccion" required></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="createIdAgencia">Agencia</label>
+                        <select class="form-control" id="createIdAgencia" name="idAgencia" required></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="createIdCliente">Cliente</label>
+                        <select class="form-control" id="createIdCliente" name="idCliente" required></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="createMontoTransaccion">Monto Transacción</label>
+                        <input type="number" class="form-control" id="createMontoTransaccion" name="montoTransaccion" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="createIdUsuario">ID Usuario</label>
+                        <input type="number" class="form-control" id="createIdUsuario" name="idUsuario" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para editar transacción -->
+<div class="modal fade" id="editTransaccionModal" tabindex="-1" aria-labelledby="editTransaccionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editTransaccionModalLabel">Editar Transacción</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="editTransaccionForm">
+                    <input type="hidden" id="editIdTransaccion" name="idTransaccion">
+                    <div class="form-group">
+                        <label for="editIdMotivoTransaccion">Motivo Transacción</label>
+                        <select class="form-control" id="editIdMotivoTransaccion" name="idMotivoTransaccion" required></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="editIdAgencia">Agencia</label>
+                        <select class="form-control" id="editIdAgencia" name="idAgencia" required></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="editIdCliente">Cliente</label>
+                        <select class="form-control" id="editIdCliente" name="idCliente" required></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="editMontoTransaccion">Monto Transacción</label>
+                        <input type="number" class="form-control" id="editMontoTransaccion" name="montoTransaccion" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editIdUsuario">ID Usuario</label>
+                        <input type="number" class="form-control" id="editIdUsuario" name="idUsuario" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para confirmar eliminación de transacción -->
+<div class="modal fade" id="deleteTransaccionModal" tabindex="-1" aria-labelledby="deleteTransaccionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteTransaccionModalLabel">Eliminar Transacción</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>¿Estás seguro de que deseas eliminar esta transacción?</p>
+                <form id="deleteTransaccionForm">
+                    <input type="hidden" id="deleteTransaccionId" name="idTransaccion">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/transacciones.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

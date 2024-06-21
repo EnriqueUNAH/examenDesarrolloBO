@@ -3,16 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{537CC597-36D2-410E-BA24-261E7D2C1FD8}|Front\\Front.csproj|c:\\users\\hnola\\onedrive\\documentos\\practica banco de occidente\\examendesrrollo\\front\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{537CC597-36D2-410E-BA24-261E7D2C1FD8}|Front\\Front.csproj|solutionrelative:front\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{537CC597-36D2-410E-BA24-261E7D2C1FD8}|Front\\Front.csproj|c:\\users\\hnola\\onedrive\\documentos\\practica banco de occidente\\examendesrrollo\\front\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{537CC597-36D2-410E-BA24-261E7D2C1FD8}|Front\\Front.csproj|solutionrelative:front\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{537CC597-36D2-410E-BA24-261E7D2C1FD8}|Front\\Front.csproj|c:\\users\\hnola\\onedrive\\documentos\\practica banco de occidente\\examendesrrollo\\front\\views\\motivotransaccion\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{537CC597-36D2-410E-BA24-261E7D2C1FD8}|Front\\Front.csproj|solutionrelative:front\\views\\motivotransaccion\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{AFDE1C88-A53C-4512-83BC-CBA4355D999B}|ExamenDesrrollo\\ExamenDesrrollo.csproj|c:\\users\\hnola\\onedrive\\documentos\\practica banco de occidente\\examendesrrollo\\examendesrrollo\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDE1C88-A53C-4512-83BC-CBA4355D999B}|ExamenDesrrollo\\ExamenDesrrollo.csproj|solutionrelative:examendesrrollo\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{537CC597-36D2-410E-BA24-261E7D2C1FD8}|Front\\Front.csproj|c:\\users\\hnola\\onedrive\\documentos\\practica banco de occidente\\examendesrrollo\\front\\wwwroot\\js\\motivotransaccion.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{537CC597-36D2-410E-BA24-261E7D2C1FD8}|Front\\Front.csproj|solutionrelative:front\\wwwroot\\js\\motivotransaccion.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{537CC597-36D2-410E-BA24-261E7D2C1FD8}|Front\\Front.csproj|c:\\users\\hnola\\onedrive\\documentos\\practica banco de occidente\\examendesrrollo\\front\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{537CC597-36D2-410E-BA24-261E7D2C1FD8}|Front\\Front.csproj|solutionrelative:front\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDE1C88-A53C-4512-83BC-CBA4355D999B}|ExamenDesrrollo\\ExamenDesrrollo.csproj|c:\\users\\hnola\\onedrive\\documentos\\practica banco de occidente\\examendesrrollo\\examendesrrollo\\models\\usuariosmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDE1C88-A53C-4512-83BC-CBA4355D999B}|ExamenDesrrollo\\ExamenDesrrollo.csproj|solutionrelative:examendesrrollo\\models\\usuariosmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDE1C88-A53C-4512-83BC-CBA4355D999B}|ExamenDesrrollo\\ExamenDesrrollo.csproj|c:\\users\\hnola\\onedrive\\documentos\\practica banco de occidente\\examendesrrollo\\examendesrrollo\\data\\usuariosdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDE1C88-A53C-4512-83BC-CBA4355D999B}|ExamenDesrrollo\\ExamenDesrrollo.csproj|solutionrelative:examendesrrollo\\data\\usuariosdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{537CC597-36D2-410E-BA24-261E7D2C1FD8}|Front\\Front.csproj|c:\\users\\hnola\\onedrive\\documentos\\practica banco de occidente\\examendesrrollo\\front\\views\\transaccionesreporte\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{537CC597-36D2-410E-BA24-261E7D2C1FD8}|Front\\Front.csproj|solutionrelative:front\\views\\transaccionesreporte\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{537CC597-36D2-410E-BA24-261E7D2C1FD8}|Front\\Front.csproj|c:\\users\\hnola\\onedrive\\documentos\\practica banco de occidente\\examendesrrollo\\front\\wwwroot\\js\\reportetransacciones.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{537CC597-36D2-410E-BA24-261E7D2C1FD8}|Front\\Front.csproj|solutionrelative:front\\wwwroot\\js\\reportetransacciones.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{537CC597-36D2-410E-BA24-261E7D2C1FD8}|Front\\Front.csproj|c:\\users\\hnola\\onedrive\\documentos\\practica banco de occidente\\examendesrrollo\\front\\controllers\\transaccionesreportecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{537CC597-36D2-410E-BA24-261E7D2C1FD8}|Front\\Front.csproj|solutionrelative:front\\controllers\\transaccionesreportecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,41 +54,119 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Front\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Front\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAHIAAAAAAAAAAAAAAIMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-19T21:29:37.514Z",
+              "DocumentIndex": 4,
+              "Title": "UsuariosModelS.cs",
+              "DocumentMoniker": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\ExamenDesrrollo\\Models\\UsuariosModelS.cs",
+              "RelativeDocumentMoniker": "ExamenDesrrollo\\Models\\UsuariosModelS.cs",
+              "ToolTip": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\ExamenDesrrollo\\Models\\UsuariosModelS.cs",
+              "RelativeToolTip": "ExamenDesrrollo\\Models\\UsuariosModelS.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T01:52:27.028Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "motivoTransaccion.js",
-              "DocumentMoniker": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\wwwroot\\js\\motivoTransaccion.js",
-              "RelativeDocumentMoniker": "Front\\wwwroot\\js\\motivoTransaccion.js",
-              "ToolTip": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\wwwroot\\js\\motivoTransaccion.js",
-              "RelativeToolTip": "Front\\wwwroot\\js\\motivoTransaccion.js",
-              "ViewState": "AQIAAH8AAAAAAAAAAADwv5QAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-06-19T21:28:05.463Z",
+              "Title": "UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\ExamenDesrrollo\\Controllers\\UsuariosController.cs",
+              "RelativeDocumentMoniker": "ExamenDesrrollo\\Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\ExamenDesrrollo\\Controllers\\UsuariosController.cs",
+              "RelativeToolTip": "ExamenDesrrollo\\Controllers\\UsuariosController.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAgwC0AAACUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T01:42:28.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Front\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Front\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAYwAkAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T01:34:08.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\Views\\TransaccionesReporte\\Index.cshtml",
+              "RelativeDocumentMoniker": "Front\\Views\\TransaccionesReporte\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\Views\\TransaccionesReporte\\Index.cshtml",
+              "RelativeToolTip": "Front\\Views\\TransaccionesReporte\\Index.cshtml",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAcwCsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-21T01:30:51.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TransaccionesReporteController.cs",
+              "DocumentMoniker": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\Controllers\\TransaccionesReporteController.cs",
+              "RelativeDocumentMoniker": "Front\\Controllers\\TransaccionesReporteController.cs",
+              "ToolTip": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\Controllers\\TransaccionesReporteController.cs",
+              "RelativeToolTip": "Front\\Controllers\\TransaccionesReporteController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T01:29:26.553Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\Views\\MotivoTransaccion\\Index.cshtml",
-              "RelativeDocumentMoniker": "Front\\Views\\MotivoTransaccion\\Index.cshtml",
-              "ToolTip": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\Views\\MotivoTransaccion\\Index.cshtml",
-              "RelativeToolTip": "Front\\Views\\MotivoTransaccion\\Index.cshtml",
-              "ViewState": "AQIAAGwAAAAAAAAAAAAAAHgAAAAxAAAA",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Front\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Front\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAAAGgAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-19T21:26:29.748Z",
+              "WhenOpened": "2024-06-20T21:47:55.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Front\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Front\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAcwC4AAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-20T21:46:57.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UsuariosData.cs",
+              "DocumentMoniker": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\ExamenDesrrollo\\Data\\UsuariosData.cs",
+              "RelativeDocumentMoniker": "ExamenDesrrollo\\Data\\UsuariosData.cs",
+              "ToolTip": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\ExamenDesrrollo\\Data\\UsuariosData.cs",
+              "RelativeToolTip": "ExamenDesrrollo\\Data\\UsuariosData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T01:54:09.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "reporteTransacciones.js",
+              "DocumentMoniker": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\wwwroot\\js\\reporteTransacciones.js",
+              "RelativeDocumentMoniker": "Front\\wwwroot\\js\\reporteTransacciones.js",
+              "ToolTip": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\wwwroot\\js\\reporteTransacciones.js",
+              "RelativeToolTip": "Front\\wwwroot\\js\\reporteTransacciones.js",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwAcAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-20T21:47:24.633Z",
               "EditorCaption": ""
             }
           ]

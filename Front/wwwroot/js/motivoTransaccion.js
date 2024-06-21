@@ -1,9 +1,9 @@
 ﻿$(document).ready(function () {
-    const apiBaseUrl = 'https://localhost:7106/api';
+    const apiBaseUrl = 'https://localhost:7106/api/MotivoTransaccion';
 
     $('#motivoTransaccionTable').DataTable({
         "ajax": {
-            "url": `${apiBaseUrl}/MotivoTransaccion`,
+            "url": apiBaseUrl,
             "dataSrc": ""
         },
         "columns": [
@@ -42,10 +42,10 @@
 
     window.showEditMotivoTransaccionModal = function (id) {
         $.ajax({
-            url: `${apiBaseUrl}/MotivoTransaccion/${id}`,
+            url: `${apiBaseUrl}/${id}`,
             method: 'GET',
             success: function (data) {
-                $('#editMotivoTransaccionId').val(data.idMotivoTransaccion);
+                $('#editIdMotivoTransaccion').val(data.idMotivoTransaccion);
                 $('#editIdTipoTransaccion').val(data.idTipoTransaccion);
                 $('#editCodigoMotivoTransaccion').val(data.codigoMotivoTransaccion);
                 $('#editNombreMotivoTransaccion').val(data.nombreMotivoTransaccion);
@@ -58,91 +58,100 @@
     };
 
     window.showDeleteMotivoTransaccionModal = function (id) {
-        $('#deleteMotivoTransaccionId').val(id);
+        $('#deleteIdMotivoTransaccion').val(id);
         $('#deleteMotivoTransaccionModal').modal('show');
     };
 
-    $('#editMotivoTransaccionForm').submit(function (e) {
-        e.preventDefault();
-        const id = $('#editMotivoTransaccionId').val();
-        const data = {
-            idMotivoTransaccion: id,
-            idTipoTransaccion: $('#editIdTipoTransaccion').val(),
-            codigoMotivoTransaccion: $('#editCodigoMotivoTransaccion').val(),
-            nombreMotivoTransaccion: $('#editNombreMotivoTransaccion').val(),
-            fechaRegistro: $('#editFechaRegistro').val(),
-            fechaModificado: new Date().toISOString(),
-            idUsuario: $('#editIdUsuario').val()
+    $('#createMotivoTransaccionForm').submit(function (event) {
+        event.preventDefault();
+        const now = new Date().toISOString();
+        const motivoTransaccion = {
+            idTipoTransaccion: parseInt($('#createIdTipoTransaccion').val(), 10),
+            codigoMotivoTransaccion: $('#createCodigoMotivoTransaccion').val(),
+            nombreMotivoTransaccion: $('#createNombreMotivoTransaccion').val(),
+            idUsuario: parseInt($('#createIdUsuario').val(), 10),
+            fechaRegistro: now,
+            fechaModificado: now
         };
 
-        fetch(`${apiBaseUrl}/MotivoTransaccion/${id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-            .then(response => response.json())
-            .then(data => {
-                if (data.isSuccess) {
-                    alert('Motivo de transacción actualizado exitosamente');
-                    $('#editMotivoTransaccionModal').modal('hide');
-                    $('#motivoTransaccionTable').DataTable().ajax.reload();
-                } else {
-                    alert('Error al actualizar el motivo de transacción');
-                }
-            })
-            .catch(error => {
-                console.error('Error al actualizar el motivo de transacción:', error);
-                alert('Error al actualizar el motivo de transacción');
-            });
-    });
-
-    $('#deleteMotivoTransaccionForm').submit(function (e) {
-        e.preventDefault();
-        const id = $('#deleteMotivoTransaccionId').val();
-
         $.ajax({
-            url: `${apiBaseUrl}/MotivoTransaccion/${id}`,
-            method: 'DELETE',
+            url: apiBaseUrl,
+            method: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(motivoTransaccion),
             success: function () {
-                $('#deleteMotivoTransaccionModal').modal('hide');
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Éxito',
+                    text: 'Motivo de transacción creado correctamente',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                $('#createMotivoTransaccionModal').modal('hide');
                 $('#motivoTransaccionTable').DataTable().ajax.reload();
+            },
+            error: function () {
+                alert('Error al crear el motivo de transacción');
             }
         });
     });
 
-    $('#createMotivoTransaccionForm').submit(function (e) {
-        e.preventDefault();
-        const data = {
-            idTipoTransaccion: $('#createIdTipoTransaccion').val(),
-            codigoMotivoTransaccion: $('#createCodigoMotivoTransaccion').val(),
-            nombreMotivoTransaccion: $('#createNombreMotivoTransaccion').val(),
-            fechaRegistro: new Date().toISOString(),
+    $('#editMotivoTransaccionForm').submit(function (event) {
+        event.preventDefault();
+        const id = $('#editIdMotivoTransaccion').val();
+        const motivoTransaccion = {
+            idMotivoTransaccion: parseInt(id, 10),
+            idTipoTransaccion: parseInt($('#editIdTipoTransaccion').val(), 10),
+            codigoMotivoTransaccion: $('#editCodigoMotivoTransaccion').val(),
+            nombreMotivoTransaccion: $('#editNombreMotivoTransaccion').val(),
+            fechaRegistro: $('#editFechaRegistro').val(),
             fechaModificado: new Date().toISOString(),
-            idUsuario: $('#createIdUsuario').val()
+            idUsuario: parseInt($('#editIdUsuario').val(), 10)
         };
 
-        fetch(`${apiBaseUrl}/MotivoTransaccion`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
+        $.ajax({
+            url: `${apiBaseUrl}/${id}`,
+            method: 'PUT',
+            contentType: 'application/json',
+            data: JSON.stringify(motivoTransaccion),
+            success: function () {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Éxito',
+                    text: 'Motivo de transacción actualizado correctamente',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                $('#editMotivoTransaccionModal').modal('hide');
+                $('#motivoTransaccionTable').DataTable().ajax.reload();
             },
-            body: JSON.stringify(data)
-        })
-            .then(response => response.json())
-            .then(data => {
-                if (data.isSuccess) {
-                    alert('Motivo de transacción creado exitosamente');
-                    $('#createMotivoTransaccionModal').modal('hide');
-                    $('#motivoTransaccionTable').DataTable().ajax.reload();
-                } else {
-                    alert('Error al crear el motivo de transacción');
-                }
-            })
-            .catch(error => {
-                console.error('Error al crear el motivo de transacción:', error);
-                alert('Error al crear el motivo de transacción');
-            });
+            error: function () {
+                alert('Error al actualizar el motivo de transacción');
+            }
+        });
+    });
+
+    $('#deleteMotivoTransaccionForm').submit(function (event) {
+        event.preventDefault();
+        const id = $('#deleteIdMotivoTransaccion').val();
+
+        $.ajax({
+            url: `${apiBaseUrl}/${id}`,
+            method: 'DELETE',
+            success: function () {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Éxito',
+                    text: 'Motivo de transacción eliminado correctamente',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                $('#deleteMotivoTransaccionModal').modal('hide');
+                $('#motivoTransaccionTable').DataTable().ajax.reload();
+            },
+            error: function () {
+                alert('Error al eliminar el motivo de transacción');
+            }
+        });
     });
 });

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Wn6xQTX21nY=",
+  "dgSpecHash": "9FsyVrvD6U8=",
   "success": true,
   "projectFilePath": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\Front.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\hnola\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

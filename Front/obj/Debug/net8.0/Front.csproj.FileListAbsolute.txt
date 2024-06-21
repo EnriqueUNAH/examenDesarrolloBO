@@ -29,3 +29,6 @@ C:\Users\hnola\OneDrive\Documentos\PRACTICA BANCO DE OCCIDENTE\ExamenDesrrollo\F
 C:\Users\hnola\OneDrive\Documentos\PRACTICA BANCO DE OCCIDENTE\ExamenDesrrollo\Front\obj\Debug\net8.0\Front.genruntimeconfig.cache
 C:\Users\hnola\OneDrive\Documentos\PRACTICA BANCO DE OCCIDENTE\ExamenDesrrollo\Front\obj\Debug\net8.0\ref\Front.dll
 C:\Users\hnola\OneDrive\Documentos\PRACTICA BANCO DE OCCIDENTE\ExamenDesrrollo\Front\obj\Debug\net8.0\Front.sourcelink.json
+C:\Users\hnola\OneDrive\Documentos\PRACTICA BANCO DE OCCIDENTE\ExamenDesrrollo\Front\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\hnola\OneDrive\Documentos\PRACTICA BANCO DE OCCIDENTE\ExamenDesrrollo\Front\obj\Debug\net8.0\Front.csproj.AssemblyReference.cache
+C:\Users\hnola\OneDrive\Documentos\PRACTICA BANCO DE OCCIDENTE\ExamenDesrrollo\Front\obj\Debug\net8.0\Front.csproj.Up2Date

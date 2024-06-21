@@ -82,16 +82,28 @@
             .then(response => response.json())
             .then(data => {
                 if (data.message.includes('actualizado exitosamente')) {
-                    alert('Canal Servicio actualizado exitosamente');
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Éxito',
+                        text: 'Canal Servicio actualizado exitosamente',
+                    });
                     $('#editCanalServicioModal').modal('hide');
                     $('#canalServicioTable').DataTable().ajax.reload();
                 } else {
-                    alert('Error al actualizar el Canal Servicio: ' + JSON.stringify(data));
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Error al actualizar el Canal Servicio: ' + JSON.stringify(data),
+                    });
                 }
             })
             .catch(error => {
                 console.error('Error al actualizar el Canal Servicio:', error);
-                alert('Error al actualizar el Canal Servicio');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Error al actualizar el Canal Servicio',
+                });
             });
     });
 
@@ -129,16 +141,28 @@
             .then(response => response.json())
             .then(data => {
                 if (data.message.includes('creado exitosamente')) {
-                    alert('Canal Servicio creado exitosamente');
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Éxito',
+                        text: 'Canal Servicio creado exitosamente',
+                    });
                     $('#createCanalServicioModal').modal('hide');
                     $('#canalServicioTable').DataTable().ajax.reload();
                 } else {
-                    alert('Error al crear el Canal Servicio: ' + JSON.stringify(data));
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Error al crear el Canal Servicio: ' + JSON.stringify(data),
+                    });
                 }
             })
             .catch(error => {
                 console.error('Error al crear el Canal Servicio:', error);
-                alert('Error al crear el Canal Servicio');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Error al crear el Canal Servicio',
+                });
             });
     });
 });

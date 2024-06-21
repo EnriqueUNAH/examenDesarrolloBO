@@ -49,6 +49,10 @@
       "PackagePath": "staticwebassets\\js\\motivoTransaccion.js"
     },
     {
+      "Id": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\wwwroot\\js\\reporteTransacciones.js",
+      "PackagePath": "staticwebassets\\js\\reporteTransacciones.js"
+    },
+    {
       "Id": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\wwwroot\\js\\scripts.js",
       "PackagePath": "staticwebassets\\js\\scripts.js"
     },
@@ -59,6 +63,18 @@
     {
       "Id": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\wwwroot\\js\\tipoCliente.js",
       "PackagePath": "staticwebassets\\js\\tipoCliente.js"
+    },
+    {
+      "Id": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\wwwroot\\js\\tipoTransaccion.js",
+      "PackagePath": "staticwebassets\\js\\tipoTransaccion.js"
+    },
+    {
+      "Id": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\wwwroot\\js\\transacciones.js",
+      "PackagePath": "staticwebassets\\js\\transacciones.js"
+    },
+    {
+      "Id": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\wwwroot\\js\\usuarios.js",
+      "PackagePath": "staticwebassets\\js\\usuarios.js"
     },
     {
       "Id": "C:\\Users\\hnola\\OneDrive\\Documentos\\PRACTICA BANCO DE OCCIDENTE\\ExamenDesrrollo\\Front\\wwwroot\\lib\\bootstrap\\LICENSE",

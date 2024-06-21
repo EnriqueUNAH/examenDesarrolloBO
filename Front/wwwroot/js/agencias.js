@@ -90,15 +90,24 @@
         })
             .then(response => {
                 if (response.ok) {
-                    alert('Agencia actualizada exitosamente');
-                    window.location.reload();
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Éxito',
+                        text: 'Agencia actualizada exitosamente',
+                    });
+                    $('#editAgenciaModal').modal('hide');
+                    $('#agenciasTable').DataTable().ajax.reload();
                 } else {
                     throw new Error('Error al actualizar la Agencia');
                 }
             })
             .catch(error => {
                 console.error('Error al actualizar la Agencia:', error);
-                alert('Error al actualizar la Agencia');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Error al actualizar la Agencia',
+                });
             });
     });
 
@@ -138,15 +147,24 @@
         })
             .then(response => {
                 if (response.ok) {
-                    alert('Agencia creada exitosamente');
-                    window.location.reload();
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Éxito',
+                        text: 'Agencia creada exitosamente',
+                    });
+                    $('#createAgenciaModal').modal('hide');
+                    $('#agenciasTable').DataTable().ajax.reload();
                 } else {
                     throw new Error('Error al crear la Agencia');
                 }
             })
             .catch(error => {
                 console.error('Error al crear la Agencia:', error);
-                alert('Error al crear la Agencia');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Error al crear la Agencia',
+                });
             });
     });
 });

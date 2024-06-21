@@ -49,7 +49,7 @@
                 $('#editCodigoTipoCliente').val(data.codigoTipoCliente);
                 $('#editNombreTipoCliente').val(data.nombreTipoCliente);
                 $('#editFechaRegistro').val(data.fechaRegistro);
-                $('#editFechaModificado').val(data.fechaModificado);
+                $('#editFechaModificado').val(new Date().toISOString());
                 $('#editIdUsuario').val(data.idUsuario);
                 $('#editTipoClienteModal').modal('show');
             }
@@ -82,17 +82,29 @@
         })
             .then(response => response.json())
             .then(data => {
-                if (data.message) {
-                    alert(data.message);
+                if (data.message && data.message.includes('actualizado exitosamente')) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Éxito',
+                        text: 'Tipo Cliente actualizado exitosamente',
+                    });
                     $('#editTipoClienteModal').modal('hide');
                     $('#tipoClienteTable').DataTable().ajax.reload();
                 } else {
-                    alert('Error al actualizar el Tipo Cliente');
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Error al actualizar el Tipo Cliente: ' + JSON.stringify(data),
+                    });
                 }
             })
             .catch(error => {
                 console.error('Error al actualizar el Tipo Cliente:', error);
-                alert('Error al actualizar el Tipo Cliente');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Error al actualizar el Tipo Cliente',
+                });
             });
     });
 
@@ -104,8 +116,20 @@
             url: `${apiBaseUrl}/${id}`,
             method: 'DELETE',
             success: function () {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Éxito',
+                    text: 'Tipo Cliente eliminado exitosamente',
+                });
                 $('#deleteTipoClienteModal').modal('hide');
                 $('#tipoClienteTable').DataTable().ajax.reload();
+            },
+            error: function () {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Error al eliminar el Tipo Cliente',
+                });
             }
         });
     });
@@ -129,17 +153,29 @@
         })
             .then(response => response.json())
             .then(data => {
-                if (data.message) {
-                    alert(data.message);
+                if (data.message && data.message.includes('creado exitosamente')) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Éxito',
+                        text: 'Tipo Cliente creado exitosamente',
+                    });
                     $('#createTipoClienteModal').modal('hide');
                     $('#tipoClienteTable').DataTable().ajax.reload();
                 } else {
-                    alert('Error al crear el Tipo Cliente');
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Error al crear el Tipo Cliente: ' + JSON.stringify(data),
+                    });
                 }
             })
             .catch(error => {
                 console.error('Error al crear el Tipo Cliente:', error);
-                alert('Error al crear el Tipo Cliente');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Error al crear el Tipo Cliente',
+                });
             });
     });
 });

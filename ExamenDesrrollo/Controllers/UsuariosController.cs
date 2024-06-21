@@ -43,14 +43,15 @@ namespace Turnos.Controllers
         public async Task<IActionResult> Authenticate([FromBody] UsuariosModelS userCredentials)
         {
             var lista = await _UsuariosData.Lista();
-            var usuario = lista.FirstOrDefault(u => u.nombreUsuario == userCredentials.nombreUsuario && u.passwordUsuario == userCredentials.passwordUsuario);
+            var usuario = lista.FirstOrDefault(u => u.nombreUsuario == userCredentials.nombreUsuario && u.passwordUsuario == userCredentials.passwordUsuario && u.isActivo);
 
             if (usuario != null)
             {
                 return Ok(true);
             }
-            return Unauthorized(false);
+            return Unauthorized(new { message = "Usuario o contraseña incorrectos o cuenta inactiva." });
         }
+
 
         [HttpPost]
         public async Task<IActionResult> Crear([FromBody] UsuariosModel usuario)

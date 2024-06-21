@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
 using System.Text;
 using System.Text.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Front.Controllers
 {
@@ -39,15 +40,9 @@ namespace Front.Controllers
 
                     if (usuarioValido)
                     {
-                        // Aquí podrías obtener más detalles del usuario si es necesario
-                        // var userResponse = await client.GetAsync($"https://localhost:7106/api/Usuarios/{nombreUsuario}");
-                        // var userJsonResponse = await userResponse.Content.ReadAsStringAsync();
-                        // var user = JObject.Parse(userJsonResponse);
-
                         HttpContext.Session.SetString("Usuario", nombreUsuario);
-                        HttpContext.Session.SetString("Nombre", nombreUsuario); // Ajusta según los detalles del usuario
+                        HttpContext.Session.SetString("Nombre", nombreUsuario);
 
-                        // Autenticar al usuario manualmente
                         var claims = new List<Claim>
                         {
                             new Claim(ClaimTypes.Name, nombreUsuario)
@@ -57,14 +52,12 @@ namespace Front.Controllers
 
                         return RedirectToAction("Index", "Home");
                     }
-                    else
-                    {
-                        ViewBag.ErrorMessage = "Usuario o contraseña incorrectos.";
-                    }
                 }
                 else
                 {
-                    ViewBag.ErrorMessage = "Error al verificar el usuario.";
+                    var jsonResponse = await response.Content.ReadAsStringAsync();
+                    var errorResponse = JObject.Parse(jsonResponse);
+                    ViewBag.ErrorMessage = errorResponse["message"].ToString();
                 }
             }
 

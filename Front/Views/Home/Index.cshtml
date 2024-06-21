@@ -1,8 +1,101 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<style>
+    .card {
+        background-color: #f8f9fa; /* Color de fondo de la tarjeta */
+        border: none; /* Sin borde */
+        transition: transform 0.2s; /* Efecto de transición al pasar el ratón */
+    }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        .card:hover {
+            transform: scale(1.05); /* Escala la tarjeta un poco al pasar el ratón */
+        }
+
+    .card-title {
+        color: #343a40; /* Color del título */
+    }
+
+    .card-text {
+        color: #6c757d; /* Color del texto */
+    }
+
+    .btn-primary {
+        background-color: #007bff; /* Color del botón */
+        border: none; /* Sin borde */
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Color del botón al pasar el ratón */
+        }
+
+</style>
+
+<div class="container mt-4">
+    <h1 class="display-4">Bienvenido</h1>
+    <p class="lead">Explora las diferentes secciones de la aplicación.</p>
+    <div class="row">
+       
+        <div class="col-md-3">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">General</h5>
+                    <p class="card-text">Accede a las configuraciones generales.</p>
+                    <a href="#collapseGeneral" data-toggle="collapse" class="btn btn-primary">Ir</a>
+                    <div class="collapse" id="collapseGeneral">
+                        <nav class="nav flex-column mt-2">
+                            <a class="nav-link" href="@Url.Action("Index", "Agencias")">Agencias</a>
+                            <a class="nav-link" href="@Url.Action("Index", "CanalServicio")">Canal Servicio</a>
+                            <a class="nav-link" href="@Url.Action("Index", "Clientes")">Clientes</a>
+                            <a class="nav-link" href="@Url.Action("Index", "TipoCliente")">Tipo Cliente</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Parámetros</h5>
+                    <p class="card-text">Configura los parámetros de la aplicación.</p>
+                    <a href="#collapseParametros" data-toggle="collapse" class="btn btn-primary">Ir</a>
+                    <div class="collapse" id="collapseParametros">
+                        <nav class="nav flex-column mt-2">
+                            <a class="nav-link" href="@Url.Action("Index", "MotivoTransaccion")">Motivo Transacción</a>
+                            <a class="nav-link" href="@Url.Action("Index", "TipoTransaccion")">Tipo Transacción</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Seguridad</h5>
+                    <p class="card-text">Gestiona la seguridad de la aplicación.</p>
+                    <a href="#collapseSeguridad" data-toggle="collapse" class="btn btn-primary">Ir</a>
+                    <div class="collapse" id="collapseSeguridad">
+                        <nav class="nav flex-column mt-2">
+                            <a class="nav-link" href="@Url.Action("Index", "Usuarios")">Usuarios</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Transaccional</h5>
+                    <p class="card-text">Accede a las operaciones transaccionales.</p>
+                    <a href="#collapseTransaccional" data-toggle="collapse" class="btn btn-primary">Ir</a>
+                    <div class="collapse" id="collapseTransaccional">
+                        <nav class="nav flex-column mt-2">
+                            <a class="nav-link" href="@Url.Action("Index", "Transacciones")">Transacciones</a>
+                            <a class="nav-link" href="@Url.Action("Index", "TransaccionesReporte")">Reporte Transacciones</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

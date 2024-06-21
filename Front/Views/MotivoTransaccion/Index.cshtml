@@ -1,10 +1,10 @@
 ﻿@{
-    ViewData["Title"] = "MotivoTransaccion";
+    ViewData["Title"] = "Motivo de Transacción";
 }
 
 <div class="container">
-    <h2>Motivo Transacción</h2>
-    <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#createMotivoTransaccionModal">Nuevo Motivo Transacción</button>
+    <h2>Motivo de Transacción</h2>
+    <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#createMotivoTransaccionModal">Nuevo Motivo de Transacción</button>
     <table id="motivoTransaccionTable" class="display" style="width:100%">
         <thead>
             <tr>
@@ -28,7 +28,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="createMotivoTransaccionModalLabel">Nuevo Motivo Transacción</h5>
+                <h5 class="modal-title" id="createMotivoTransaccionModalLabel">Nuevo Motivo de Transacción</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -63,14 +63,14 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="editMotivoTransaccionModalLabel">Editar Motivo Transacción</h5>
+                <h5 class="modal-title" id="editMotivoTransaccionModalLabel">Editar Motivo de Transacción</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <form id="editMotivoTransaccionForm">
-                    <input type="hidden" id="editMotivoTransaccionId" name="idMotivoTransaccion">
+                    <input type="hidden" id="editIdMotivoTransaccion" name="idMotivoTransaccion">
                     <input type="hidden" id="editFechaRegistro" name="fechaRegistro">
                     <input type="hidden" id="editFechaModificado" name="fechaModificado">
                     <div class="form-group">
@@ -101,7 +101,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="deleteMotivoTransaccionModalLabel">Eliminar Motivo Transacción</h5>
+                <h5 class="modal-title" id="deleteMotivoTransaccionModalLabel">Eliminar Motivo de Transacción</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -109,7 +109,7 @@
             <div class="modal-body">
                 <p>¿Estás seguro de que deseas eliminar este motivo de transacción?</p>
                 <form id="deleteMotivoTransaccionForm">
-                    <input type="hidden" id="deleteMotivoTransaccionId" name="idMotivoTransaccion">
+                    <input type="hidden" id="deleteIdMotivoTransaccion" name="idMotivoTransaccion">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                     <button type="submit" class="btn btn-danger">Eliminar</button>
                 </form>
@@ -119,3 +119,4 @@
 </div>
 
 <script src="~/js/motivoTransaccion.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

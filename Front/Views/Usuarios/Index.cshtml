@@ -1,0 +1,139 @@
+﻿@{
+    ViewData["Title"] = "Usuarios";
+}
+
+<div class="container">
+    <h2>Usuarios</h2>
+    <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#createUsuarioModal">Nuevo Usuario</button>
+    <table id="usuariosTable" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>ID Usuario</th>
+                <th>Código Usuario</th>
+                <th>Nombre Usuario</th>
+                <th>Contraseña</th>
+                <th>Activo</th>
+                <th>Última Conexión</th>
+                <th>Fecha Registro</th>
+                <th>Fecha Modificado</th>
+                <th>ID Usuario Registro</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal para crear usuario -->
+<div class="modal fade" id="createUsuarioModal" tabindex="-1" aria-labelledby="createUsuarioModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createUsuarioModalLabel">Nuevo Usuario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="createUsuarioForm">
+                    <div class="form-group">
+                        <label for="createCodigoUsuario">Código Usuario</label>
+                        <input type="text" class="form-control" id="createCodigoUsuario" name="codigoUsuario" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="createNombreUsuario">Nombre Usuario</label>
+                        <input type="text" class="form-control" id="createNombreUsuario" name="nombreUsuario" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="createPasswordUsuario">Contraseña</label>
+                        <input type="password" class="form-control" id="createPasswordUsuario" name="passwordUsuario" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="createIsActivo">Activo</label>
+                        <select class="form-control" id="createIsActivo" name="isActivo">
+                            <option value="1">Activo</option>
+                            <option value="0">Inactivo</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="createIdUsuarioRegistro">ID Usuario Registro</label>
+                        <input type="number" class="form-control" id="createIdUsuarioRegistro" name="idUsuarioRegistro" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal para editar usuario -->
+<div class="modal fade" id="editUsuarioModal" tabindex="-1" aria-labelledby="editUsuarioModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editUsuarioModalLabel">Editar Usuario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="editUsuarioForm">
+                    <input type="hidden" id="editUsuarioId" name="idUsuario">
+                    <input type="hidden" id="editFechaRegistro" name="fechaRegistro">
+                    <div class="form-group">
+                        <label for="editCodigoUsuario">Código Usuario</label>
+                        <input type="text" class="form-control" id="editCodigoUsuario" name="codigoUsuario" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editNombreUsuario">Nombre Usuario</label>
+                        <input type="text" class="form-control" id="editNombreUsuario" name="nombreUsuario" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editPasswordUsuario">Contraseña</label>
+                        <input type="password" class="form-control" id="editPasswordUsuario" name="passwordUsuario" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editIsActivo">Activo</label>
+                        <select class="form-control" id="editIsActivo" name="isActivo">
+                            <option value="1">Activo</option>
+                            <option value="0">Inactivo</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="editIdUsuarioRegistro">ID Usuario Registro</label>
+                        <input type="number" class="form-control" id="editIdUsuarioRegistro" name="idUsuarioRegistro" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal para confirmar eliminación de usuario -->
+<div class="modal fade" id="deleteUsuarioModal" tabindex="-1" aria-labelledby="deleteUsuarioModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteUsuarioModalLabel">Eliminar Usuario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>¿Estás seguro de que deseas eliminar este usuario?</p>
+                <form id="deleteUsuarioForm">
+                    <input type="hidden" id="deleteUsuarioId" name="idUsuario">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/usuarios.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

@@ -18,6 +18,7 @@ builder.Services.AddSingleton<TipoTransaccionData>();
 builder.Services.AddSingleton<UsuariosData>();
 builder.Services.AddSingleton<TipoClienteData>();
 builder.Services.AddSingleton<CanalServicioData>();
+builder.Services.AddSingleton<TransaccionesReporteData>();
 
 
 
